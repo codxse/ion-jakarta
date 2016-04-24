@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('ionJakarta.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -39,18 +39,104 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  // Custom Vars and States
+  $scope.menuTitle = 'Menu';
+  $scope.topiks = [
+    { name: 'Ekonomi', sref: 'app.menuEko' },
+    { name: 'Keuangan Daerah', sref: 'app.menuKed' },
+    { name: 'Tentang', sref: 'app.tentang' }
+  ];
+
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('MenuEkoCtrl', function($scope) {
+  $scope.menus = [
+    {
+      name: 'Iktisar Statistik',
+      tag: 'Ketenaga Kerjaan',
+      sref: 1
+    },
+    {
+      name: 'UMP',
+      tag: 'Ketenaga Kerjaan',
+      sref: 2
+    },
+    {
+      name: 'Pertumbuhan Ekonomi',
+      tag: 'Perekonomian',
+      sref: 3
+    },
+    {
+      name: 'Inflasi Tahunan',
+      tag: 'Perekonomian',
+      sref: 4 },
+    {
+      name: 'Inflasi Bulanan',
+      tag: 'Perekonomian',
+      sref: 5
+    },
+    {
+      name: 'Komponen Inflasi',
+      tag: 'Perekonomian',
+      sref: 6
+    },
+    {
+      name: 'Pendapatan Perkapita',
+      tag: 'Perekonomian',
+      sref: 7
+    },
+    {
+      name: 'Struktur Ekonomi',
+      tag: 'Perekonomian',
+      sref: 8
+    }
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('MenuKedCtrl', function($scope) {
+  $scope.menus = [
+    {
+      name: 'APBD 2015',
+      tag: 'APBD',
+      sref: 9
+    },
+    {
+      name: 'Nilai Ekspor-Impor',
+      tag: 'Ekspor-Impor',
+      sref: 10
+    },
+    {
+      name: 'Volume dan Nilai Ekspor',
+      tag: 'Ekspor-Impor',
+      sref: 11
+    },
+    {
+      name: 'Nilai Impor Menurut Golongan',
+      tag: 'Ekspor-Impor',
+      sref: 12
+    },
+    {
+      name: 'Harga Pangan',
+      tag: 'Komoditas',
+      sref: 12
+    },
+    {
+      name: 'Harga Grosir',
+      tag: 'Komoditas',
+      sref: 14
+    }
+  ];
+})
+
+.controller('TentangCtrl', function($scope) {
+  $scope.tentang =
+    {
+      title: 'Ion Jakarta',
+      desc: 'Ion Jakarta adalah aplikasi yang menyajikan visualisasi data dari data terbuka Pemerintah Provinsi DKI Jakarta.'
+    };
+})
+
+.controller('PageCtrl', function($scope, $stateParams) {
+  console.log($stateParams);
 });
