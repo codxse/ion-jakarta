@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('ionJakarta.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -39,18 +39,43 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  // Custom Vars and States
+  $scope.menuTitle = 'Menu';
+  $scope.topiks = [
+    { name: 'Ekonomi', sref: 'app.menuEko' },
+    { name: 'Keuangan Daerah', sref: 'app.menuKed' },
+    { name: 'Tentang', sref: 'app.tentang' }
+  ];
+
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('MenuEkoCtrl', function($scope) {
+  $scope.path = 'menu-eko';
+  $scope.menus = [
+    { name: 'Iktisar Statistik', sref: 1 },
+    { name: 'UMP', sref: 2 },
+    { name: 'Pertumbuhan Ekonomi', sref: 3 },
+    { name: 'Inflasi Tahunan', sref: 4 },
+    { name: 'Inflasi Bulanan', sref: 5 },
+    { name: 'Komponen Inflasi', sref: 6 },
+    { name: 'Pendapatan Perkapita', sref: 7},
+    { name: 'Struktur Ekonomi', sref: 8}
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('MenuKedCtrl', function($scope) {
+  $scope.path = 'menu-ked';
+  $scope.menus = [
+    { name: 'APBD 2015', sref: 9 },
+    { name: 'Nilai Ekspor-Impor', sref: 10 },
+    { name: 'Volume dan Nilai Ekspor', sref: 11 },
+    { name: 'Nilai Impor Menurut Golongan', sref: 12 },
+    { name: 'Harga Pangan', sref: 12 },
+    { name: 'Harga Grosir', sref: 14 }
+  ];
+})
+
+.controller('PageCtrl', function($scope, $stateParams) {
+  console.log($stateParams);
 });
