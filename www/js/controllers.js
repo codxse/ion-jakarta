@@ -51,29 +51,90 @@ angular.module('ionJakarta.controllers', [])
 })
 
 .controller('MenuEkoCtrl', function($scope) {
-  $scope.path = 'menu-eko';
   $scope.menus = [
-    { name: 'Iktisar Statistik', sref: 1 },
-    { name: 'UMP', sref: 2 },
-    { name: 'Pertumbuhan Ekonomi', sref: 3 },
-    { name: 'Inflasi Tahunan', sref: 4 },
-    { name: 'Inflasi Bulanan', sref: 5 },
-    { name: 'Komponen Inflasi', sref: 6 },
-    { name: 'Pendapatan Perkapita', sref: 7},
-    { name: 'Struktur Ekonomi', sref: 8}
+    {
+      name: 'Iktisar Statistik',
+      tag: 'Ketenaga Kerjaan',
+      sref: 1
+    },
+    {
+      name: 'UMP',
+      tag: 'Ketenaga Kerjaan',
+      sref: 2
+    },
+    {
+      name: 'Pertumbuhan Ekonomi',
+      tag: 'Perekonomian',
+      sref: 3
+    },
+    {
+      name: 'Inflasi Tahunan',
+      tag: 'Perekonomian',
+      sref: 4 },
+    {
+      name: 'Inflasi Bulanan',
+      tag: 'Perekonomian',
+      sref: 5
+    },
+    {
+      name: 'Komponen Inflasi',
+      tag: 'Perekonomian',
+      sref: 6
+    },
+    {
+      name: 'Pendapatan Perkapita',
+      tag: 'Perekonomian',
+      sref: 7
+    },
+    {
+      name: 'Struktur Ekonomi',
+      tag: 'Perekonomian',
+      sref: 8
+    }
   ];
 })
 
 .controller('MenuKedCtrl', function($scope) {
-  $scope.path = 'menu-ked';
   $scope.menus = [
-    { name: 'APBD 2015', sref: 9 },
-    { name: 'Nilai Ekspor-Impor', sref: 10 },
-    { name: 'Volume dan Nilai Ekspor', sref: 11 },
-    { name: 'Nilai Impor Menurut Golongan', sref: 12 },
-    { name: 'Harga Pangan', sref: 12 },
-    { name: 'Harga Grosir', sref: 14 }
+    {
+      name: 'APBD 2015',
+      tag: 'APBD',
+      sref: 9
+    },
+    {
+      name: 'Nilai Ekspor-Impor',
+      tag: 'Ekspor-Impor',
+      sref: 10
+    },
+    {
+      name: 'Volume dan Nilai Ekspor',
+      tag: 'Ekspor-Impor',
+      sref: 11
+    },
+    {
+      name: 'Nilai Impor Menurut Golongan',
+      tag: 'Ekspor-Impor',
+      sref: 12
+    },
+    {
+      name: 'Harga Pangan',
+      tag: 'Komoditas',
+      sref: 12
+    },
+    {
+      name: 'Harga Grosir',
+      tag: 'Komoditas',
+      sref: 14
+    }
   ];
+})
+
+.controller('TentangCtrl', function($scope) {
+  $scope.tentang =
+    {
+      title: 'Ion Jakarta',
+      desc: 'Ion Jakarta adalah aplikasi yang menyajikan visualisasi data dari data terbuka Pemerintah Provinsi DKI Jakarta.'
+    };
 })
 
 .controller('PageCtrl', function($scope, $stateParams) {

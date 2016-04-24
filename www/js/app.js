@@ -1,4 +1,11 @@
-angular.module('ionJakarta', ['ionic', 'ionJakarta.controllers'])
+angular.module('ionJakarta', [
+  'ionic',
+  'ionJakarta.controllers',
+  'ionJakarta.services',
+  'ionJakarta.filters',
+  'ionJakarta.directives',
+  'angular.filter'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
