@@ -1,9 +1,9 @@
-<ion-view view-title="{{menuTitle}}">
+<ion-view view-title="Keuangan Daerah">
+  <br />
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="menu in menus" ng-href="#/app/:menu.sref">
-        {{menu.name}}
-      </ion-item>
+    <ion-list ng-repeat="(tag, names) in menus | groupBy: 'tag'">
+      <div class="item item-divider">{{tag}}</div>
+      <a class="item" ng-href="#/app/{{menu.sref}}" ng-repeat="menu in names">{{menu.name}}</a>
     </ion-list>
   </ion-content>
 </ion-view>
