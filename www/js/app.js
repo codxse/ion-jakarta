@@ -64,7 +64,7 @@ angular.module('ionJakarta', [
   })
 
   .state('app.page', {
-    url: '/:pageTicker',
+    url: '/:tagTicker/:nameTicker/:srefTicker',
     views: {
       'menuContent': {
         templateUrl: 'templates/page.html',

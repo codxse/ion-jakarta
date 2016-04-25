@@ -50,84 +50,88 @@ angular.module('ionJakarta.controllers', [])
 
 })
 
-.controller('MenuEkoCtrl', function($scope) {
-  $scope.menus = [
-    {
-      name: 'Iktisar Statistik',
-      tag: 'Ketenaga Kerjaan',
-      sref: 1
-    },
-    {
-      name: 'UMP',
-      tag: 'Ketenaga Kerjaan',
-      sref: 2
-    },
-    {
-      name: 'Pertumbuhan Ekonomi',
-      tag: 'Perekonomian',
-      sref: 3
-    },
-    {
-      name: 'Inflasi Tahunan',
-      tag: 'Perekonomian',
-      sref: 4 },
-    {
-      name: 'Inflasi Bulanan',
-      tag: 'Perekonomian',
-      sref: 5
-    },
-    {
-      name: 'Komponen Inflasi',
-      tag: 'Perekonomian',
-      sref: 6
-    },
-    {
-      name: 'Pendapatan Perkapita',
-      tag: 'Perekonomian',
-      sref: 7
-    },
-    {
-      name: 'Struktur Ekonomi',
-      tag: 'Perekonomian',
-      sref: 8
-    }
-  ];
-})
+.controller('MenuEkoCtrl', ['$scope',
+  function($scope) {
+    $scope.menus = [
+      {
+        name: 'Iktisar Statistik',
+        tag: 'Ketenaga Kerjaan',
+        sref: 1
+      },
+      {
+        name: 'UMP',
+        tag: 'Ketenaga Kerjaan',
+        sref: 2
+      },
+      {
+        name: 'Pertumbuhan Ekonomi',
+        tag: 'Perekonomian',
+        sref: 3
+      },
+      {
+        name: 'Inflasi Tahunan',
+        tag: 'Perekonomian',
+        sref: 4 },
+      {
+        name: 'Inflasi Bulanan',
+        tag: 'Perekonomian',
+        sref: 5
+      },
+      {
+        name: 'Komponen Inflasi',
+        tag: 'Perekonomian',
+        sref: 6
+      },
+      {
+        name: 'Pendapatan Perkapita',
+        tag: 'Perekonomian',
+        sref: 7
+      },
+      {
+        name: 'Struktur Ekonomi',
+        tag: 'Perekonomian',
+        sref: 8
+      }
+    ];
+  }
+])
 
-.controller('MenuKedCtrl', function($scope) {
-  $scope.menus = [
-    {
-      name: 'APBD 2015',
-      tag: 'APBD',
-      sref: 9
-    },
-    {
-      name: 'Nilai Ekspor-Impor',
-      tag: 'Ekspor-Impor',
-      sref: 10
-    },
-    {
-      name: 'Volume dan Nilai Ekspor',
-      tag: 'Ekspor-Impor',
-      sref: 11
-    },
-    {
-      name: 'Nilai Impor Menurut Golongan',
-      tag: 'Ekspor-Impor',
-      sref: 12
-    },
-    {
-      name: 'Harga Pangan',
-      tag: 'Komoditas',
-      sref: 12
-    },
-    {
-      name: 'Harga Grosir',
-      tag: 'Komoditas',
-      sref: 14
-    }
-  ];
-})
+.controller('MenuKedCtrl', ['$scope',
+  function($scope) {
+    $scope.menus = [
+      {
+        name: 'APBD 2015',
+        tag: 'APBD',
+        sref: 9
+      },
+      {
+        name: 'Nilai Ekspor-Impor',
+        tag: 'Ekspor-Impor',
+        sref: 10
+      },
+      {
+        name: 'Volume dan Nilai Ekspor',
+        tag: 'Ekspor-Impor',
+        sref: 11
+      },
+      {
+        name: 'Nilai Impor Menurut Golongan',
+        tag: 'Ekspor-Impor',
+        sref: 12
+      },
+      {
+        name: 'Harga Pangan',
+        tag: 'Komoditas',
+        sref: 12
+      },
+      {
+        name: 'Harga Grosir',
+        tag: 'Komoditas',
+        sref: 14
+      }
+    ];
+  }
+])
 
 .controller('TentangCtrl', function($scope) {
   $scope.tentang =
@@ -137,6 +141,14 @@ angular.module('ionJakarta.controllers', [])
     };
 })
 
-.controller('PageCtrl', function($scope, $stateParams) {
-  console.log($stateParams);
-});
+.controller('PageCtrl', ['$scope', '$stateParams',
+  function($scope, $stateParams) {
+    $scope.ticker = {
+      tag: $stateParams.tagTicker,
+      name: $stateParams.nameTicker,
+      sref: $stateParams.srefTicker
+    };
+
+    console.log($scope.ticker);
+  }
+]);

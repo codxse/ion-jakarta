@@ -1,5 +1,26 @@
-<ion-view view-title="{{title}}">
-  <ion-content>
-    <h1>Playlist</h1>
+<ion-view view-title="{{ticker.tag}}">
+
+  <div class="bar bar-subheader bar-light">
+    <h6 class="title button-left button-right">
+      <b>Visualisasi {{ticker.name}}</b>
+    </h6>
+  </div>
+
+  <ion-content class="has-subheader">
+
+    <div class="card">
+      <div class="item item-divider">Keterangan</div>
+      <div class="row row-center">
+        <div class="col">Data: </div>
+        <div class="col">1000.5000</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">Deskripsi</div>
+        <div class="padding">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lectus metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+    </div>
   </ion-content>
 </ion-view>
