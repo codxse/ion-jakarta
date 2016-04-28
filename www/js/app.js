@@ -63,12 +63,12 @@ angular.module('ionJakarta', [
     }
   })
 
-  .state('app.page', {
+  .state('app.pageChartLine', {
     url: '/:tagTicker/:nameTicker/:srefTicker',
     views: {
       'menuContent': {
-        templateUrl: 'templates/page.html',
-        controller: 'PageCtrl'
+        templateUrl: 'templates/page-chart-line.html',
+        controller: 'PageChartLineCtrl'
       }
     }
   });

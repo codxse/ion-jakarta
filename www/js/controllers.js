@@ -54,43 +54,52 @@ angular.module('ionJakarta.controllers', [])
   function($scope) {
     $scope.menus = [
       {
+        sref: 1,
         name: 'Iktisar Statistik',
         tag: 'Ketenaga Kerjaan',
-        sref: 1
+        chart: ''
       },
       {
+        sref: 2,
         name: 'UMP',
         tag: 'Ketenaga Kerjaan',
-        sref: 2
+        chart: ''
       },
       {
+        sref: 3,
         name: 'Pertumbuhan Ekonomi',
         tag: 'Perekonomian',
-        sref: 3
+        chart: ''
       },
       {
+        sref: 4,
         name: 'Inflasi Tahunan',
         tag: 'Perekonomian',
-        sref: 4 },
+        chart: ''
+      },
       {
+        sref: 5,
         name: 'Inflasi Bulanan',
         tag: 'Perekonomian',
-        sref: 5
+        chart: ''
       },
       {
+        sref: 6,
         name: 'Komponen Inflasi',
         tag: 'Perekonomian',
-        sref: 6
+        chart: ''
       },
       {
+        sref: 7,
         name: 'Pendapatan Perkapita',
         tag: 'Perekonomian',
-        sref: 7
+        chart: ''
       },
       {
+        sref: 8,
         name: 'Struktur Ekonomi',
         tag: 'Perekonomian',
-        sref: 8
+        chart: ''
       }
     ];
   }
@@ -100,34 +109,40 @@ angular.module('ionJakarta.controllers', [])
   function($scope) {
     $scope.menus = [
       {
+        sref: 9,
         name: 'APBD 2015',
         tag: 'APBD',
-        sref: 9
+        chart: ''
       },
       {
+        sref: 10,
         name: 'Nilai Ekspor-Impor',
         tag: 'Ekspor-Impor',
-        sref: 10
+        chart: ''
       },
       {
+        sref: 11,
         name: 'Volume dan Nilai Ekspor',
         tag: 'Ekspor-Impor',
-        sref: 11
+        chart: ''
       },
       {
+        sref: 12,
         name: 'Nilai Impor Menurut Golongan',
         tag: 'Ekspor-Impor',
-        sref: 12
+        chart: ''
       },
       {
+        sref: 13,
         name: 'Harga Pangan',
         tag: 'Komoditas',
-        sref: 12
+        chart: ''
       },
       {
+        sref: 14,
         name: 'Harga Grosir',
         tag: 'Komoditas',
-        sref: 14
+        chart: ''
       }
     ];
   }
@@ -141,7 +156,7 @@ angular.module('ionJakarta.controllers', [])
     };
 })
 
-.controller('PageCtrl', ['$scope', '$stateParams',
+.controller('PageChartLineCtrl', ['$scope', '$stateParams',
   function($scope, $stateParams) {
     $scope.ticker = {
       tag: $stateParams.tagTicker,
