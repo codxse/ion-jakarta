@@ -156,14 +156,38 @@ angular.module('ionJakarta.controllers', [])
     };
 })
 
-.controller('PageChartLineCtrl', ['$scope', '$stateParams',
-  function($scope, $stateParams) {
+.controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataServices',
+  function($scope, $stateParams, metaDataServices) {
     $scope.ticker = {
-      tag: $stateParams.tagTicker,
+      sref: $stateParams.srefTicker,
       name: $stateParams.nameTicker,
-      sref: $stateParams.srefTicker
+      tag: $stateParams.tagTicker,
+      chart: $stateParams.chartTicker
     };
-
+    console.log('in PageChartLineCtrl: ');
     console.log($scope.ticker);
+
+    // When Ionic catching the event, function on $scope.on will be invoked
+    $scope.$on("$ionicView.afterEnter", function() {
+      getMetaData();
+      getDetailsData();
+    });
+
+    function getMetaData() {
+      var promise = metaDataServices.getMetaData($scope.ticker);
+      promise.then(function(jsonData) {
+        console.log('in PageChartLineCtrl: getMetaData()');
+        console.log(jsonData);
+      });
+    }
+
+    function getDetailsData() {
+      var promise = metaDataServices.getDetailsData($scope.ticker);
+      promise.then(function(jsonData) {
+        console.log('in PageChartLineCtrl: getDetailsData');
+        console.log(jsonData);
+      });
+    }
+
   }
 ]);
