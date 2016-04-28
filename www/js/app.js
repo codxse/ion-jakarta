@@ -1,5 +1,7 @@
 angular.module('ionJakarta', [
   'ionic',
+  'nvd3',
+  'nvChart',
   'ionJakarta.controllers',
   'ionJakarta.services',
   'ionJakarta.filters',

@@ -174,9 +174,9 @@ angular.module('ionJakarta.controllers', [])
 
     // When Ionic catching the event, function on $scope.on will be invoked
     $scope.$on("$ionicView.afterEnter", function() {
+      $scope.chartViewFn(4);
       getMetaData();
       getDetailsData();
-      $scope.chartViewFn(4);
     });
 
     function getMetaData() {
