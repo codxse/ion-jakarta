@@ -156,8 +156,8 @@ angular.module('ionJakarta.controllers', [])
     };
 })
 
-.controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataServices',
-  function($scope, $stateParams, metaDataServices) {
+.controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataService',
+  function($scope, $stateParams, metaDataService) {
     $scope.ticker = {
       sref: $stateParams.srefTicker,
       name: $stateParams.nameTicker,
@@ -178,7 +178,7 @@ angular.module('ionJakarta.controllers', [])
     });
 
     function getMetaData() {
-      var promise = metaDataServices.getMetaData($scope.ticker);
+      var promise = metaDataService.getMetaData($scope.ticker);
       promise.then(function(jsonData) {
         console.log('in PageChartLineCtrl: getMetaData()');
         console.log(jsonData);
@@ -188,7 +188,7 @@ angular.module('ionJakarta.controllers', [])
     }
 
     function getDetailsData() {
-      var promise = metaDataServices.getDetailsData($scope.ticker);
+      var promise = metaDataService.getDetailsData($scope.ticker);
       promise.then(function(jsonData) {
         console.log('in PageChartLineCtrl: getDetailsData');
         console.log(jsonData);

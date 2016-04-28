@@ -1,6 +1,10 @@
 angular.module('ionJakarta.services', [])
 
-.factory('metaDataServices', function($q, $http) {
+.factory('encodeURIService', function() {
+
+})
+
+.factory('metaDataService', function($q, $http) {
 
   var getDetailsData = function(ticker) {
 
