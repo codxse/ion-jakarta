@@ -170,14 +170,24 @@ angular.module('ionJakarta.controllers', [])
     // When Ionic catching the event, function on $scope.on will be invoked
     $scope.$on("$ionicView.afterEnter", function() {
       getMetaData();
+      getDetailsData();
     });
 
     function getMetaData() {
       var promise = metaDataServices.getMetaData($scope.ticker);
       promise.then(function(jsonData) {
-        console.log('in PageChartLineCtrl: promise function');
+        console.log('in PageChartLineCtrl: getMetaData()');
         console.log(jsonData);
       });
     }
+
+    function getDetailsData() {
+      var promise = metaDataServices.getDetailsData($scope.ticker);
+      promise.then(function(jsonData) {
+        console.log('in PageChartLineCtrl: getDetailsData');
+        console.log(jsonData);
+      });
+    }
+
   }
 ]);
