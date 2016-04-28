@@ -156,8 +156,8 @@ angular.module('ionJakarta.controllers', [])
     };
 })
 
-.controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataService',
-  function($scope, $stateParams, metaDataService) {
+.controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataService', 'dateService',
+  function($scope, $stateParams, metaDataService, dateService) {
     $scope.ticker = {
       sref: $stateParams.srefTicker,
       name: $stateParams.nameTicker,
@@ -167,6 +167,7 @@ angular.module('ionJakarta.controllers', [])
     console.log('in PageChartLineCtrl: ');
     console.log($scope.ticker);
 
+    // Button on top of page
     $scope.chartViewFn = function(click) {
       $scope.chartView = click;
     };
@@ -175,6 +176,7 @@ angular.module('ionJakarta.controllers', [])
     $scope.$on("$ionicView.afterEnter", function() {
       getMetaData();
       getDetailsData();
+      $scope.chartViewFn(4);
     });
 
     function getMetaData() {
