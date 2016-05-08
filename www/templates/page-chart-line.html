@@ -1,5 +1,12 @@
 <ion-view view-title="{{ticker.tag}}">
 
+  <ion-nav-buttons side="secondary">
+    <button menu-toggle="right" class="button button-icon icon ion-ios-gear"></button>
+  </ion-nav-buttons>
+  <!-- <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-map"></button>
+  </ion-nav-buttons> -->
+
   <div class="bar bar-subheader bar-light">
     <h6 class="title button-left button-right">
       <b>Visualisasi {{ticker.name}}</b>
@@ -16,11 +23,11 @@
       <a ng-click="chartViewFn(5)" ng-class="chartView == 5 ? 'active' : ''" class="button"><span style="font-size:30px">&infin;</span></a>
     </div>
 
-    <img ng-if="chartView == 1" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=1d&q=1&l=on&z=m&a=vm" width="100%"></img>
-    <img ng-if="chartView == 2" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=5d&q=1&l=on&z=m&a=vm" width="100%"></img>
-    <img ng-if="chartView == 3" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=3m&q=1&l=on&z=m&a=vm" width="100%"></img>
-    <img ng-if="chartView == 4" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=1y&q=1&l=on&z=m&a=vm" width="100%"></img>
-    <img ng-if="chartView == 5" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=my&q=1&l=on&z=m&a=vm" width="100%"></img>
+    <img ng-if="chartView == 1" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=1d&q=1&l=on&z=m&a=vm" style="width:100%"></img>
+    <img ng-if="chartView == 2" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=5d&q=1&l=on&z=m&a=vm" style="width:100%"></img>
+    <img ng-if="chartView == 3" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=3m&q=1&l=on&z=m&a=vm" style="width:100%"></img>
+    <img ng-if="chartView == 4" ng-src="http://chart.finance.yahoo.com/z?s={{'YHOO'}}&t=my&q=1&l=on&z=m&a=vm" style="width:100%"></img>
+    <div ng-if="chartView == 5"><nvd3 options="options" data="data"></nvd3></div>
 
     <div class="card">
       <div class="item item-divider">Keterangan</div>
