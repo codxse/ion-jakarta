@@ -5,8 +5,8 @@
       <div class="item item-divider">
         <div class="row"><strong>{{tag}}</strong></div>
       </div>
-      <a class="item" ng-href="#/app/{{menu.tag}}/{{menu.name}}/{{menu.sref}}" ng-repeat="menu in names">
-        <div class="row">{{menu.name}}</div>
+      <a class="item" ng-href="#/app/{{menu.tag}}/{{menu.name}}/{{menu.sref}}/{{menu.chart}}" ng-repeat="menu in names">
+        <div class="row">{{menu.name}} - {{menu.chart}}</div>
       </a>
     </ion-list>
   </ion-content>

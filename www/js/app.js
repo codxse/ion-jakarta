@@ -1,5 +1,6 @@
 angular.module('ionJakarta', [
   'ionic',
+  'nvd3',
   'ionJakarta.controllers',
   'ionJakarta.services',
   'ionJakarta.filters',
@@ -64,7 +65,7 @@ angular.module('ionJakarta', [
   })
 
   .state('app.pageChartLine', {
-    url: '/:tagTicker/:nameTicker/:srefTicker',
+    url: '/:tagTicker/:nameTicker/:srefTicker/:chartTicker',
     views: {
       'menuContent': {
         templateUrl: 'templates/page-chart-line.html',
