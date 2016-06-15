@@ -44,10 +44,10 @@ angular.module('ionJakarta.controllers', [])
   $scope.menuTitle = 'Menu';
   $scope.topiks = [
     { name: 'Beranda', sref: 'main', icon: 'ion-ios-home' },
-    { name: 'Topik Ekonomi', sref: 'app.menuEko', icon: 'ion-arrow-graph-up-right' },
-    { name: 'Topik Keuangan Daerah', sref: 'app.menuKed', icon: 'ion-cash' },
-    { name: 'Tentang', sref: 'app.tentang', icon: 'ion-android-apps' },
-    { name: 'Perkenalan', sref: 'intro', icon: 'ion-ios-browsers'}
+    { name: 'Topik Makro Ekonomi', sref: 'app.menuMakro', icon: 'ion-ios-world' },
+    { name: 'Topik Mikro Ekonomi', sref: 'app.menuMikro', icon: 'ion-pizza' },
+    { name: 'Tentang', sref: 'app.tentang', icon: 'ion-document-text' },
+    { name: 'Perkenalan', sref: 'intro', icon: 'ion-heart'}
   ];
 
 })
@@ -83,110 +83,39 @@ function($scope, $state) {
     $state.go('intro');
   };
 
-  $scope.toMenuEko = function() {
-    $state.go('app.menuEko');
+  $scope.toMenuMakro = function() {
+    $state.go('app.menuMakro');
   };
 
-  $scope.toMenuKed = function() {
-    $state.go('app.menuKed');
+  $scope.toMenuMikro = function() {
+    $state.go('app.menuMikro');
   };
 
 }])
 
-.controller('MenuEkoCtrl', ['$scope',
+.controller('MenuMakroCtrl', ['$scope',
 function($scope) {
   $scope.menus = [
-    {
-      sref: 1,
-      name: 'Iktisar Statistik',
-      tag: 'Ketenaga Kerjaan',
-      chart: ['line', 'pie']
-    },
-    {
-      sref: 2,
-      name: 'UMP',
-      tag: 'Ketenaga Kerjaan',
-      chart: 'line'
-    },
-    {
-      sref: 3,
-      name: 'Pertumbuhan Ekonomi',
-      tag: 'Perekonomian',
-      chart: 'line'
-    },
-    {
-      sref: 4,
-      name: 'Inflasi Tahunan',
-      tag: 'Perekonomian',
-      chart: 'line'
-    },
-    {
-      sref: 5,
-      name: 'Inflasi Bulanan',
-      tag: 'Perekonomian',
-      chart: 'line'
-    },
-    {
-      sref: 6,
-      name: 'Komponen Inflasi',
-      tag: 'Perekonomian',
-      chart: 'line'
-    },
-    {
-      sref: 7,
-      name: 'Pendapatan Perkapita',
-      tag: 'Perekonomian',
-      chart: 'line'
-    },
-    {
-      sref: 8,
-      name: 'Struktur Ekonomi',
-      tag: 'Perekonomian',
-      chart: 'line'
-    }
+    { data: 1, name: 'Iktisar Statistik', category: 'Ketenaga Kerjaan', chart: ['line', 'pie'] },
+    { data: 2, name: 'Upah Minimum Provinsi', category: 'Ketenaga Kerjaan', chart: 'line' },
+    { data: 3, name: 'Pertumbuhan Ekonomi', category: 'Perekonomian', chart: 'line' },
+    { data: 4, name: 'Tingkat Inflasi', category: 'Perekonomian', chart: 'line' },
+    { data: 5, name: 'Komponen Inflasi', category: 'Perekonomian', chart: 'line' },
+    { data: 9, name: 'Struktur Ekonomi', category: 'Perekonomian', chart: 'line' },
+    { data: 13, name: 'Pendapatan Perkapita', category: 'Pendapatan Perkapita', chart: 'line' }
   ];
 }
 ])
 
-.controller('MenuKedCtrl', ['$scope',
+.controller('MenuMikroCtrl', ['$scope',
 function($scope) {
   $scope.menus = [
-    {
-      sref: 9,
-      name: 'APBD 2015',
-      tag: 'APBD',
-      chart: 'line'
-    },
-    {
-      sref: 10,
-      name: 'Nilai Ekspor-Impor',
-      tag: 'Ekspor-Impor',
-      chart: 'line'
-    },
-    {
-      sref: 11,
-      name: 'Volume dan Nilai Ekspor',
-      tag: 'Ekspor-Impor',
-      chart: 'line'
-    },
-    {
-      sref: 12,
-      name: 'Nilai Impor Menurut Golongan',
-      tag: 'Ekspor-Impor',
-      chart: 'line'
-    },
-    {
-      sref: 13,
-      name: 'Harga Pangan',
-      tag: 'Komoditas',
-      chart: 'line'
-    },
-    {
-      sref: 14,
-      name: 'Harga Grosir',
-      tag: 'Komoditas',
-      chart: 'line'
-    }
+    { data: 6, name: 'Ekspor & Impor Jakarta', category: 'Ekspor & Impor', chart: 'line' },
+    { data: 7, name: 'Volume dan Nilai Ekspor', category: 'Ekspor & Impor', chart: 'line' },
+    { data: 8, name: 'Nilai Impor Menurut Golongan', category: 'Ekspor & Impor', chart: 'line' },
+    { data: 10, name: 'Harga Pangan', category: 'Komoditas', chart: 'line' },
+    { data: 11, name: 'Harga Grosir', category: 'Komoditas', chart: 'line' },
+    { data: 12, name: 'Anggaran Belanja Daerah', category: 'APBD', chart: 'line' }
   ];
 }
 ])

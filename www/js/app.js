@@ -46,22 +46,22 @@ angular.module('ionJakarta', [
     controller: 'MainCtrl'
   })
 
-  .state('app.menuEko', {
-    url: '/menu-eko',
+  .state('app.menuMakro', {
+    url: '/menu-makro',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu-eko.html',
-        controller: 'MenuEkoCtrl'
+        templateUrl: 'templates/menu-makro.html',
+        controller: 'MenuMakroCtrl'
       }
     }
   })
 
-  .state('app.menuKed', {
-    url: '/menu-ked',
+  .state('app.menuMikro', {
+    url: '/menu-mikro',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu-ked.html',
-        controller: 'MenuKedCtrl'
+        templateUrl: 'templates/menu-mikro.html',
+        controller: 'MenuMikroCtrl'
       }
     }
   })
