@@ -13,14 +13,15 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Topik</h1>
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
-    <ion-content>
+
+    <div class="scroll-content ionic-scroll  has-header">
       <ion-list>
-        <ion-item menu-close ng-repeat="topik in topiks" ui-sref="{{topik.sref}}">
-          {{topik.name}}
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
+        <a class="item item-icon-left gray" menu-close ng-repeat="topik in topiks" ui-sref="{{topik.sref}}">
+          <i class="icon {{ topik.icon }}"></i> {{ topik.name }}
+        </a>
+    </ion-list>
+  </div>
+</ion-side-menu>
 </ion-side-menus>

@@ -34,22 +34,44 @@ angular.module('ionJakarta', [
     controller: 'AppCtrl'
   })
 
-  .state('app.menuEko', {
-    url: '/menu-eko',
+  .state('intro', {
+    url: '/intro',
+    templateUrl: 'templates/intro.html',
+    controller: 'IntroCtrl'
+  })
+
+  // .state('app.main', {
+  //   url: '/main',
+  //   views: {
+  //     'menuContent': {
+  //       templateUrl: 'templates/main.html',
+  //       controller: 'MainCtrl'
+  //     }
+  //   }
+  // })
+
+  .state('main', {
+    url: '/main',
+    templateUrl: 'templates/main.html',
+    controller: 'MainCtrl'
+  })
+
+  .state('app.menuMakro', {
+    url: '/menu-makro',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu-eko.html',
-        controller: 'MenuEkoCtrl'
+        templateUrl: 'templates/menu-makro.html',
+        controller: 'MenuMakroCtrl'
       }
     }
   })
 
-  .state('app.menuKed', {
-    url: '/menu-ked',
+  .state('app.menuMikro', {
+    url: '/menu-mikro',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu-ked.html',
-        controller: 'MenuKedCtrl'
+        templateUrl: 'templates/menu-mikro.html',
+        controller: 'MenuMikroCtrl'
       }
     }
   })
@@ -64,8 +86,138 @@ angular.module('ionJakarta', [
     }
   })
 
+  .state('app.data-1', {
+    url: '/data-1',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ikhtisar-statistik.html',
+        controller: 'IkhtisatStatistikCtrl'
+      }
+    }
+  })
+
+  .state('app.data-2', {
+    url: '/data-2',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/upah-minimum-provinsi.html',
+        controller: 'UpahMinimumProvinsiCtrl'
+      }
+    }
+  })
+
+  .state('app.data-3', {
+    url: '/data-3',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/pertumbuhan-ekonomi.html',
+        controller: 'PertumbuhanEkonomiCtrl'
+      }
+    }
+  })
+
+  .state('app.data-4', {
+    url: '/data-4',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/tingkat-inflasi.html',
+        controller: 'TingkatInflasiCtrl'
+      }
+    }
+  })
+
+  .state('app.data-5', {
+    url: '/data-5',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/komponen-inflasi.html',
+        controller: 'KomponenInflasiCtrl'
+      }
+    }
+  })
+
+  .state('app.data-6', {
+    url: '/data-6',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ekspor-impor-jakarta.html',
+        controller: 'EksporImporJakartaCtrl'
+      }
+    }
+  })
+
+  .state('app.data-7', {
+    url: '/data-7',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/volume-dan-nilai-ekspor.html',
+        controller: 'VolumeDanNilaiEksporCtrl'
+      }
+    }
+  })
+
+  .state('app.data-8', {
+    url: '/data-8',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/nilai-impor-menurut-golongan.html',
+        controller: 'NilaiImporMenurutGolonganCtrl'
+      }
+    }
+  })
+
+  .state('app.data-9', {
+    url: '/data-9',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/struktur-ekonomi.html',
+        controller: 'StrukturEkonomiCtrl'
+      }
+    }
+  })
+
+  .state('app.data-10', {
+    url: '/data-10',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/harga-pangan.html',
+        controller: 'HargaPanganCtrl'
+      }
+    }
+  })
+
+  .state('app.data-11', {
+    url: '/data-11',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/harga-grosir.html',
+        controller: 'HargaGrosirCtrl'
+      }
+    }
+  })
+
+  .state('app.data-12', {
+    url: '/data-12',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/apbd-2015.html',
+        controller: 'ApbdCtrl'
+      }
+    }
+  })
+
+  .state('app.data-13', {
+    url: '/data-13',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/pendapatan-perkapita.html',
+        controller: 'PendapatanPerkapitaCtrl'
+      }
+    }
+  })
+
   .state('app.pageChartLine', {
-    url: '/:tagTicker/:nameTicker/:srefTicker/:chartTicker',
+    url: '/example',
     views: {
       'menuContent': {
         templateUrl: 'templates/page-chart-line.html',
@@ -74,5 +226,5 @@ angular.module('ionJakarta', [
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/tentang');
+  $urlRouterProvider.otherwise('/intro');
 });

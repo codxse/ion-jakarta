@@ -1,0 +1,28 @@
+
+<ion-view hide-back-button="true" view-title="Beranda">
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+    ng-click="toIntro()" ng-show="!slideIndex">
+    Perkenalan
+  </button>
+</ion-nav-buttons>
+<ion-content class="padding">
+  <div class="row">
+    <div style="margin: 0 auto">
+      <!-- icon by: Recep Kutuk from
+      http://www.flaticon.com/free-icon/statistics_97904 --->
+      <img style="width:35vh; height:35vh;" src="/img/statistics-icon.png" />
+    </div>
+  </div>
+  <div class="row">
+  <button class="button button-block button-large" ng-click="toMenuMakro()">
+    Topik Ekonomi Makro
+  </button>
+</div>
+<div class="row">
+  <button class="button button-block button-large" ng-click="toMenuMikro()">
+    Topik Ekonomi Mikro
+  </button>
+</div>
+</ion-content>
+</ion-view>
