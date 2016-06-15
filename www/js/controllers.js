@@ -43,9 +43,11 @@ angular.module('ionJakarta.controllers', [])
   // Custom Vars and States
   $scope.menuTitle = 'Menu';
   $scope.topiks = [
-    { name: 'Ekonomi', sref: 'app.menuEko' },
-    { name: 'Keuangan Daerah', sref: 'app.menuKed' },
-    { name: 'Tentang', sref: 'app.tentang' }
+    { name: 'Beranda', sref: 'main', icon: 'ion-ios-home' },
+    { name: 'Topik Ekonomi', sref: 'app.menuEko', icon: 'ion-arrow-graph-up-right' },
+    { name: 'Topik Keuangan Daerah', sref: 'app.menuKed', icon: 'ion-cash' },
+    { name: 'Tentang', sref: 'app.tentang', icon: 'ion-android-apps' },
+    { name: 'Perkenalan', sref: 'intro', icon: 'ion-ios-browsers'}
   ];
 
 })
@@ -79,6 +81,14 @@ function($scope, $state) {
   console.log('In MainCtrl');
   $scope.toIntro = function() {
     $state.go('intro');
+  };
+
+  $scope.toMenuEko = function() {
+    $state.go('app.menuEko');
+  };
+
+  $scope.toMenuKed = function() {
+    $state.go('app.menuKed');
   };
 
 }])
@@ -185,8 +195,8 @@ function($scope) {
   console.log('On TentangCtrl');
   $scope.tentang =
   {
-    title: 'Ion Jakarta',
-    desc: 'Ion Jakarta adalah aplikasi yang menyajikan visualisasi data dari data terbuka Pemerintah Provinsi DKI Jakarta.'
+    title: 'ionJakarta',
+    desc: 'ionJakarta adalah aplikasi yang menyajikan visualisasi data terbuka Pemerintah Provinsi DKI Jakarta.'
   };
 })
 

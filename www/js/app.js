@@ -33,7 +33,7 @@ angular.module('ionJakarta', [
     templateUrl: 'templates/topik.html',
     controller: 'AppCtrl'
   })
-  
+
   .state('intro', {
     url: '/',
     templateUrl: 'templates/intro.html',
@@ -86,5 +86,5 @@ angular.module('ionJakarta', [
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tentang');
+  $urlRouterProvider.otherwise('/app/tentang');
 });

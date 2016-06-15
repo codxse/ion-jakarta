@@ -1,4 +1,4 @@
-<ion-view view-title="{{topiks[0].name}}">
+<ion-view view-title="Topik Ekonomi">
 
   <ion-content>
     <ion-list ng-repeat="(tag, names) in menus | groupBy: 'tag'">
@@ -6,7 +6,7 @@
         <div class="row"><strong>{{tag}}</strong></div>
       </div>
       <a class="item" ng-href="#/app/{{menu.tag}}/{{menu.name}}/{{menu.sref}}/{{menu.chart}}" ng-repeat="menu in names">
-        <div class="row">{{menu.name}} - {{menu.chart}}</div>
+        <div class="row">{{menu.name}}</div>
       </a>
     </ion-list>
   </ion-content>

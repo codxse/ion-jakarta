@@ -73,14 +73,10 @@ body {
     text-decoration:none;
 }
 
-.scroll-content {
-  display: table !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-.scroll {
-  display: table-cell;
-  padding-bottom: 100px;
-  vertical-align: middle;
+h1, .h1, .center {
   text-align: center;
+}
+
+.padding-h1 {
+  padding: 14px 0 28px 0;
 }

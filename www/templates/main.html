@@ -1,5 +1,5 @@
 
-<ion-view hide-back-button="true" view-title="Menu">
+<ion-view hide-back-button="true" view-title="Beranda">
   <ion-nav-buttons side="left">
     <button class="button button-positive button-clear no-animation"
     ng-click="toIntro()" ng-show="!slideIndex">
@@ -15,13 +15,13 @@
     </div>
   </div>
   <div class="row">
-  <button class="button button-block button-large" ng-click="toEkoMenu()">
-    Ekonomi
+  <button class="button button-block button-large" ng-click="toMenuMakro()">
+    Topik Makro Ekonomi
   </button>
 </div>
 <div class="row">
-  <button class="button button-block button-large">
-    Keuangan Daerah
+  <button class="button button-block button-large" ng-click="toMenuMikro()">
+    Topik Mikro Ekonomi
   </button>
 </div>
 </ion-content>
