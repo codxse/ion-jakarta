@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 /* ---- [ Slider CSS ] ---- */
 body {
-  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+  cursor: auto;
 }
 .slider {
   height: 100%;

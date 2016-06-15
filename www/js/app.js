@@ -27,6 +27,13 @@ angular.module('ionJakarta', [
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/topik.html',
+    controller: 'AppCtrl'
+  })
+  
   .state('intro', {
     url: '/',
     templateUrl: 'templates/intro.html',
@@ -37,13 +44,6 @@ angular.module('ionJakarta', [
     url: '/main',
     templateUrl: 'templates/main.html',
     controller: 'MainCtrl'
-  })
-
-  .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/topik.html',
-    controller: 'AppCtrl'
   })
 
   .state('app.menuEko', {

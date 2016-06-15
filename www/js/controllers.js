@@ -182,6 +182,7 @@ function($scope) {
 ])
 
 .controller('TentangCtrl', function($scope) {
+  console.log('On TentangCtrl');
   $scope.tentang =
   {
     title: 'Ion Jakarta',
