@@ -1,0 +1,64 @@
+<ion-nav-bar class="bar-light">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+<ion-view view-title="Perkenalan">
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+    ng-click="startApp()" ng-show="!slideIndex">
+    Lewati
+  </button>
+  <button class="button button-positive button-clear no-animation"
+  ng-click="previous()" ng-show="slideIndex > 0">
+  Kembali
+</button>
+</ion-nav-buttons>
+<ion-nav-buttons side="right">
+  <button class="button button-positive button-clear no-animation"
+  ng-click="next()" ng-show="slideIndex != 2">
+  Maju
+</button>
+<button class="button button-positive button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 2">
+  Mulai
+</button>
+</ion-nav-buttons>
+<ion-slide-box on-slide-changed="slideChanged(index)">
+  <ion-slide>
+    <ion-content class="padding">
+      <h3><i>Terima Kasih!</i><br />Telah Menggunakan Aplikasi  ionJakarta</h3>
+      <div id="logo">
+        <img src="img/app_icon.png">
+      </div>
+      <p>
+        ionJakarta adalah apikasi visualisasi data terbuka Jakarta untuk topik data ekonomi dan keuangan daerah.
+      </p>
+      <p>
+        Semoga Bermanfaat, (Pengembang)
+      </p>
+    </ion-content>
+  </ion-slide>
+  <ion-slide>
+    <ion-content class="padding">
+      <h3>Cara Memakai Aplikasi</h3>
+
+      <div id="list">
+        <ol>
+          <li>Pilih topik visualisasi</li>
+          <li>Pilih data favorit</li>
+          <li>Bersenang-senang xD</li>
+        </ol>
+      </div>
+    </ion-content>
+  </ion-slide>
+  <ion-slide>
+    <ion-content class="padding">
+      <div class="round-button"><div class="round-button-circle">
+        <button ng-click="startApp()" class="round-button" >Mulai!</button>
+      </div></div>
+    </ion-content>
+  </ion-slide>
+</ion-slide-box>
+</ion-view>

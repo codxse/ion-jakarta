@@ -27,6 +27,18 @@ angular.module('ionJakarta', [
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('intro', {
+    url: '/',
+    templateUrl: 'templates/intro.html',
+    controller: 'IntroCtrl'
+  })
+
+  .state('main', {
+    url: '/main',
+    templateUrl: 'templates/main.html',
+    controller: 'MainCtrl'
+  })
+
   .state('app', {
     url: '/app',
     abstract: true,
@@ -74,5 +86,5 @@ angular.module('ionJakarta', [
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/tentang');
+  $urlRouterProvider.otherwise('/tentang');
 });
