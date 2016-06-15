@@ -1,6 +1,6 @@
 angular.module('ionJakarta.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -40,6 +40,10 @@ angular.module('ionJakarta.controllers', [])
     }, 1000);
   };
 
+  $scope.goHome = function() {
+    $state.go('main');
+  };
+
   // Custom Vars and States
   $scope.menuTitle = 'Menu';
   $scope.topiks = [
@@ -56,6 +60,7 @@ angular.module('ionJakarta.controllers', [])
 function($scope, $state, $ionicSlideBoxDelegate) {
 
   // called to navigate to the main page
+  console.log('on IntroCtrl');
   $scope.startApp = function() {
     $state.go('main');
   };
@@ -78,7 +83,7 @@ function($scope, $state, $ionicSlideBoxDelegate) {
 .controller('MainCtrl', ['$scope', '$state',
 function($scope, $state) {
 
-  console.log('In MainCtrl');
+  console.log('on MainCtrl');
   $scope.toIntro = function() {
     $state.go('intro');
   };
@@ -96,7 +101,7 @@ function($scope, $state) {
 .controller('MenuMakroCtrl', ['$scope',
 function($scope) {
   $scope.menus = [
-    { data: 1, name: 'Iktisar Statistik', category: 'Ketenaga Kerjaan', chart: ['line', 'pie'] },
+    { data: 1, name: 'Ikhtisar Statistik', category: 'Ketenaga Kerjaan', chart: ['line', 'pie'] },
     { data: 2, name: 'Upah Minimum Provinsi', category: 'Ketenaga Kerjaan', chart: 'line' },
     { data: 3, name: 'Pertumbuhan Ekonomi', category: 'Perekonomian', chart: 'line' },
     { data: 4, name: 'Tingkat Inflasi', category: 'Perekonomian', chart: 'line' },
@@ -128,6 +133,71 @@ function($scope) {
     desc: 'ionJakarta adalah aplikasi yang menyajikan visualisasi data terbuka Pemerintah Provinsi DKI Jakarta.'
   };
 })
+
+.controller('IkhtisatStatistikCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on IkhtisatStatistikCtrl');
+}])
+
+.controller('UpahMinimumProvinsiCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on UpahMinimumProvinsiCtrl');
+}])
+
+.controller('PertumbuhanEkonomiCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on PertumbuhanEkonomiCtrl');
+}])
+
+.controller('TingkatInflasiCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on TingkatInflasiCtrl');
+}])
+
+.controller('KomponenInflasiCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on KomponenInflasiCtrl');
+}])
+
+.controller('EksporImporJakartaCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on EksporImporJakartaCtrl');
+}])
+
+.controller('VolumeDanNilaiEksporCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on VolumeDanNilaiEksporCtrl');
+}])
+
+.controller('NilaiImporMenurutGolonganCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on NilaiImporMenurutGolonganCtrl');
+}])
+
+.controller('StrukturEkonomiCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on StrukturEkonomiCtrl');
+}])
+
+.controller('HargaPanganCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on HargaPanganCtrl');
+}])
+
+.controller('HargaGrosirCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on HargaGrosirCtrl');
+}])
+
+.controller('ApbdCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on ApbdCtrl');
+}])
+
+.controller('PendapatanPerkapitaCtrl', ['$scope', '$stateParams',
+function($scope, $stateParams) {
+  console.log('on PendapatanPerkapitaCtrl');
+}])
 
 .controller('PageChartLineCtrl', ['$scope', '$stateParams', 'metaDataService', 'dateService',
 function($scope, $stateParams, metaDataService, dateService) {

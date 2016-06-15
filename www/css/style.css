@@ -80,3 +80,7 @@ h1, .h1, .center {
 .padding-h1 {
   padding: 14px 0 28px 0;
 }
+
+.back-button > .back-text > .default-title {
+    display:none;
+}

@@ -1,12 +1,16 @@
 <ion-view view-title="Topik Mikro Ekonomi">
 
+  <ion-nav-buttons side="secondary">
+    <button ng-click="goHome()" menu-toggle="right" class="button button-icon icon ion-ios-home-outline"></button>
+  </ion-nav-buttons>
+
   <ion-content>
     <ion-list ng-repeat="(category, names) in menus | groupBy: 'category'">
       <div class="item item-divider">
         <div class="row"><i class = "ion-android-folder"></i>&nbsp;<strong>{{ category }}</strong></div>
       </div>
-      <a class="item" ng-href="#/app/data-{{menu.data}}/" ng-repeat="menu in names">
-        <div class="row">{{menu.name}}</div>
+      <a class="item" ng-href="#/app/data-{{ menu.data }}" ng-repeat="menu in names">
+        <div class="row">{{ menu.name }}</div>
       </a>
     </ion-list>
   </ion-content>
