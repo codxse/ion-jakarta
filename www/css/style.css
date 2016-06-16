@@ -5,9 +5,11 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
-.slider {
+
+/*.slider {
   height: 100%;
-}
+}*/
+
 .slider-slide {
   padding-top: 80px;
   color: #000;
@@ -73,7 +75,7 @@ body {
     text-decoration:none;
 }
 
-h1, .h1, .center {
+h1, h3, .center {
   text-align: center;
 }
 
@@ -81,6 +83,16 @@ h1, .h1, .center {
   padding: 14px 0 28px 0;
 }
 
+.padding-h3 {
+  padding: 14px 0 0 0;
+}
+
 .back-button > .back-text > .default-title {
     display:none;
+}
+
+.nv-point {
+  stroke-opacity: 1 !important;
+  stroke-width: 5px;
+  fill-opacity: 1 !important;
 }

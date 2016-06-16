@@ -1,6 +1,25 @@
 <ion-view view-title="Topik Makro Ekonomi">
+  <ion-nav-buttons side="secondary">
+    <button menu-toggle="right" class="button button-icon icon ion-ios-gear"></button>
+  </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content class="has-header padding scroll scroll-content ionic-scroll" overflow-scroll="true">
+    <div class="card">
+      <h3 class="padding-h3">Besar Ikhtisar Statistik</h3>
+      <div class="item item-text-wrap">
+        <div ng-controller="IkhtisatStatistikCtrl">
+          <nvd3 options="options2" data="data2"></nvd3>
+        </div>
+      </div>
+    </div>
 
+    <div class="card">
+      <h3 class="padding-h3">Laju Ikhtisar Statistik</h3>
+      <div class="item item-text-wrap">
+        <div ng-controller="IkhtisatStatistikCtrl">
+          <nvd3 options="options1" data="data1"></nvd3>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
